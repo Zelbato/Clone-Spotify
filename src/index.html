@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone Spotify </title>
+    <title>Clone Spotify</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,14 +24,14 @@
                         'green-main': '#1ED760'
                     },
                     backgroundImage: theme => ({
-                        'spotify-theme': "url('/img/bursts.svg')",
-                        'spotify-theme-mobile': "url('/img/bursts-mobile.svg')",
+                        'spotify-theme': "url('./img/bursts.svg')", // Ajuste conforme a estrutura do seu projeto
+                        'spotify-theme-mobile': "url('./img/bursts-mobile.svg')"
                     }),
                     backgroundSize: {
                         '175%': '175%',
                         '195%': '195%'
                     },
-                    backgrondPosition: {
+                    backgroundPosition: {
                         'banner': '46% 4%',
                         'banner-mobile': 'top 25% center',
                     },
@@ -45,9 +45,101 @@
 </head>
 
 <body>
+    <!--NavBar-->
+    <header class="header">
+        <div class="container flex fixed bg-black w-full px-3 md:px-20 py-4">
+            <div class="content flex items-center justify-between w-full">
+                <div class="logo">
+                    <a href="">
+                        <img src="img/spotify-logo.png" alt="Logo-spotufy" class="w-20 md:w-125px">
+                    </a>
+                </div><!--Logo-->
+                <div class="icon-menu flex justify-end flex-1 md:hidden text-white text-3xl">
+                    <i class="fas fa-bars"></i>
+                </div><!--Icon-menu-->
+                <div class="navigation items-end flex-1 text-white font-bold hidden md:flex">
+                    <nav class="nav flex-1 ">
+                        <ul class="flex justify-end flex-1">
+                            <li class="px-4"><a class="hover:text-hoverspt text-sm" href="#">Premium</a></li>
+                            <li class="px-4"><a class="hover:text-hoverspt text-sm" href="#">Ajuda</a></li>
+                            <li class="px-4"><a class="hover:text-hoverspt text-sm" href="#">Baixar</a></li>
+                            <li class="px-4"><span class="border-r text-white"></span></li>
+                            <li class="px-4"><a class="hover:text-hoverspt text-sm" href="#">Inscrever-se</a></li>
+                            <li class="px-4"><a class="hover:text-hoverspt text-sm" href="#">Log in</a></li>
+                        </ul>
+                    </nav>
+                </div><!--Navigation-->
+            </div><!--Content -->
+        </div><!--Container-->
+    </header><!--Header-->
 
-    <h1 class="text-blue-600">Clone Spotify</h1>
-    <i class="fab fa-instagram text-blue-500"></i>
+    <!--Conteúdo-->
+    <main class="main">
+        <div
+            class="container flex flex-col justify-center text-center bg-spotify-theme-mobile md:bg-spotify-theme bg-banner-mobile md:bg-banner bg-195% md:bg-175% bg-purple-main text-green-main bg-center py-72 px-4">
+            <h1 class="text-5xl md:text-9xl md-10 font-bold mx-auto leading-none">Escutar muda tudo</h1>
+            <p class="text-md :mdtext-lg my-10">Milhões de músicas e podcasts para explorar. E nem precisa de cartão de
+                crédito.</p>
+            <a href="#"
+                class="bg-green-main hover:bg-white text-purple-main text-sm rounded-full px-10 py-3 uppercase font-bold max-w-xl mx-auto tracking-widest duration-500 ">Obtenha
+                o Spotify free</a>
+        </div><!--Container-->
+    </main><!--Main-->
+
+    <!--Footer-->
+    <footer>
+        <div class="footer grid grid-cols-1 md:grid-cols-6 bg-black text-white p-4 md:p-20">
+            <div class="footer-content md:col-span-1 pt-10 md:pt-0">
+                <a href="#">
+                    <img src="img/spotify-logo.png" alt="spotify-logo" class="w-20 md:w-132px">
+                </a>
+            </div><!--Footer Content-->
+            <div class="footer-navigation md:col-span-1 pt-10 md:pt-4">
+                <h3 class="uppercase text-gray-500 font-bol text-xs tracking-widest mb-5">Empresa</h3>
+                <ul>
+                    <li class="mb-5 "><a href="">Sobre</a></li>
+                    <li class="mb-5 "><a href="">Empregos</a></li>
+                    <li class="mb-5 "><a href="">For the Record</a></li>
+                </ul>
+            </div><!--Footer Navigation-->
+            <div class="footer-navigation-2 md:col-span-1 pt-10 md:pt-4">
+                <h3 class="uppercase text-gray-500 font-bol text-xs tracking-widest mb-5">Comunidade</h3>
+                <ul>
+                    <li class="mb-5 "><a href="">Artistas</a></li>
+                    <li class="mb-5 "><a href="">Desenvolvedores</a></li>
+                    <li class="mb-5 "><a href="">Publicidade</a></li>
+                    <li class="mb-5 "><a href="">Investidores</a></li>
+                    <li class="mb-5 "><a href="">Fornecedores</a></li>
+                </ul>
+            </div><!--Navigation-2-->
+            <div class="footer-navigation-3 md:col-span-1 pt-10 md:pt-4">
+                <h3 class="uppercase text-gray-500 font-bol text-xs tracking-widest mb-5">Links Úteis</h3>
+                <ul>
+                    <li class="mb-5 "><a href="">Ajuda</a></li>
+                    <li class="mb-5 "><a href="">Player da Web</a></li>
+                    <li class="mb-5 "><a href="">Aplicativo móvel grátis</a></li>
+                </ul>
+            </div><!--Navigation-3-->
+            <div class="redes-sociais md:col-span-2 pt-10 md:pt-4">
+               <ul class="flex md:justify-end">
+                <li class="flex items-center justify-center text-2xl bg-gray-900 w-12 h-12 rounded-full hover:text-green-main mx-2"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="flex items-center justify-center text-2xl bg-gray-900 w-12 h-12 rounded-full hover:text-green-main mx-2"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="flex items-center justify-center text-2xl bg-gray-900 w-12 h-12 rounded-full hover:text-green-main mx-2"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+               </ul>
+            </div><!--Redes Sociais-->
+            <div class="footer-f md:col-span-4 mt-20 ">
+                <ul>
+                    <li class="inline-block text-xs text-gray-600 mr-4"><a href="">Termos de Uso</a></li>
+                    <li class="inline-block text-xs text-gray-600 mr-4"><a href="">Privacidade</a></li>
+                    <li class="inline-block text-xs text-gray-600 mr-4"><a href="">Cookies</a></li>
+                    <li class="inline-block text-xs text-gray-600 mr-4"><a href="">Sobre anúncios</a></li>
+                </ul>
+            </div><!--Footer-f-->
+            <div class="copyright md:col-span-2 mt-20 ">
+                <p class="flex justify-end text-gray-500 textt-xs">&copy; 2020 Spotify AB</p>
+            </div>
+        </div><!--Div Footer-->
+    </footer><!--Footer-->
 </body>
 
 </html>
